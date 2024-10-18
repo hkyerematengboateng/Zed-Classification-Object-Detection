@@ -1,0 +1,15 @@
+version: '3'
+services:
+  redis:
+    image: redis:latest
+    ports:
+      - "6359:6359"
+
+  cv_ros2_bridge:
+    build:
+      context: .
+      dockerfile: .
+    depends_on:
+      - redis
+    environment:
+      - ROS_DOMAIN_ID=0

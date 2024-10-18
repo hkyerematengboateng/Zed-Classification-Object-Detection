@@ -1,0 +1,10 @@
+*.pt
+*.cache
+*.engine
+*.onnx
+ultralytics
+pytorch_yolov8
+datasets
+runs
+__pycache__
+object-detectiion-ui/node

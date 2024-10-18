@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  zed:
+    image: stereolabs/zed:4.0-jetson environment:
+      - DISPLAY=$DISPLAY
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /usr/local/zed/resources:/usr/local/zed/resources
+    privileged: true
+    gpus: all
